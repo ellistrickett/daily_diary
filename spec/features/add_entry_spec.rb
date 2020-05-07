@@ -5,6 +5,6 @@ feature 'adding entries' do
     fill_in('title', with: '07/05/2020')
     click_button('submit')
 
-    expect(page).to have_content 'Title: 07/05/2020'
+    expect(page).to have_content '07/05/2020'
   end
 end

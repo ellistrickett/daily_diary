@@ -1,0 +1,1 @@
+CREATE TABLE entries (id SERIAL, title VARCHAR(20), tags VARCHAR(20), comments VARCHAR(20), PRIMARY KEY (id));
