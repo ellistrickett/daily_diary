@@ -1,7 +1,13 @@
+<form action="/add-entry" method="post">
+  <label for="title">Title:</label><br>
+  <input type="text" name="title" ><br>
+  <input type="submit" name="submit" value="Submit">
+</form>
+
 <h> All Entries: </h>
 
 <ol>
   <% @diary.each do |entry| %>
-    <li> <%= entry.title%>
+    <li> Title: <%= entry.title%>
   <% end %>
 </ol>

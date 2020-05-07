@@ -26,4 +26,15 @@ class Diary
     entries
   end
 
+  def self.add(title)
+
+    if ENV['ENVIRONMENT'] == 'test'
+      con = PG.connect :dbname => 'daily_diary_test'
+    else
+      con = PG.connect :dbname => 'daily_diary'
+    end
+
+    con.exec( "INSERT INTO entries(title) VALUES ('#{title}')")
+  end
+
 end
